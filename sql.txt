@@ -1,0 +1,52 @@
+CREATE TABLE student_init (
+    reg_no VARCHAR PRIMARY KEY ,
+    password VARCHAR NOT NULL,
+    first_name VARCHAR NOT NULL,
+    middle_name VARCHAR NOT NULL,
+    last_name VARCHAR NOT NULL,
+    year_of_study INTEGER NOT NULL,
+    semester INTEGER NOT NULL,
+    programme VARCHAR NOT NULL,
+    COURSE VARCHAR NOT NULL,
+    admission_date INTEGER NOT NULL,
+    admission_month INTEGER NOT NULL,
+    admission_year INTEGER NOT NULL
+);
+
+DROP TABLE student_init;
+
+CREATE TABLE login(
+    reg_no VARCHAR PRIMARY KEY,
+    password VARCHAR NOT NULL
+);
+
+DROP TABLE login;
+
+CREATE TABLE students_information(
+    reg_no VARCHAR PRIMARY KEY,
+    first_name VARCHAR NOT NULL,
+    middle_name VARCHAR NOT NULL,
+    last_name VARCHAR NOT NULL,
+    year_of_study INTEGER NOT NULL,
+    semester INTEGER NOT NULL,
+    programme VARCHAR NOT NULL,
+    COURSE VARCHAR NOT NULL,
+    admission_date VARCHAR NOT NULL,
+    admission_month VARCHAR NOT NULL,
+    admission_year INTEGER NOT NULL
+);
+DROP TABLE students_information;
+
+CREATE TABLE course_code(
+    reg_no VARCHAR PRIMARY KEY,
+    course_unit_code VARCHAR NOT NULL
+);
+
+DROP TABLE course_code;
+
+CREATE TABLE curriculum(
+    course_id VARCHAR PRIMARY KEY,
+    course_name VARCHAR NOT NULL,
+    electives VARCHAR NOT NULL
+)
+DROP TABLE curriculum;
